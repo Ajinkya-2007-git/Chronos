@@ -33,3 +33,10 @@ Chronos requires no installation, dependencies, Node.js packages, or local serve
 * **Storage:** No external network fetches or CORS rules applied; runs natively on local file execution.
 
 ## Project Structure
+├──index.html     # Semantic layout and Bento Grid structure
+├── style.css      # CSS variables, glassmorphic styling, media queries
+└── script.js      # Time calculations, ticker loops, and event handling
+
+## License
+
+MIT License — Free for personal and educational use.
