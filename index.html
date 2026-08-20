@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0b1020">
+	<title>Age &amp; Life Dashboard</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="ambient ambient-one" aria-hidden="true"></div>
+	<div class="ambient ambient-two" aria-hidden="true"></div>
+	<main class="dashboard-shell">
+		<header class="topbar">
+			<a class="brand" href="index.html" aria-label="Age and Life Dashboard home">
+				<span class="brand-mark" aria-hidden="true">✦</span>
+				<span>Age<span class="brand-accent">/</span>Life</span>
+			</a>
+			<div class="topbar-actions">
+				<span class="live-status"><span class="status-dot"></span>Live model</span>
+				<button class="icon-button" id="themeToggle" type="button" aria-label="Toggle light theme" title="Toggle theme">☼</button>
+			</div>
+		</header>
+
+		<section class="hero" aria-labelledby="page-title">
+			<div>
+				<p class="eyebrow">Your timeline, made tangible</p>
+				<h1 id="page-title">Every second<br><em>counts.</em></h1>
+				<p class="hero-copy">A precise snapshot of the time you have lived, and the small wonders hidden inside it.</p>
+			</div>
+			<div class="hero-orbit" aria-hidden="true">
+				<div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div>
+				<span class="orbit-core">NOW</span>
+			</div>
+		</section>
+
+		<section class="input-panel glass-panel" aria-labelledby="birth-heading">
+			<div class="panel-heading">
+				<div><p class="eyebrow">Start here</p><h2 id="birth-heading">When did your story begin?</h2></div>
+				<span class="step-number">01</span>
+			</div>
+			<form id="birthForm" class="birth-form">
+				<label><span>Birth date</span><input id="birthDate" type="date" required></label>
+				<label><span>Birth time <small>(optional)</small></span><input id="birthTime" type="time" step="1" value="00:00:00"></label>
+				<button class="primary-button" type="submit"><span>Calculate my timeline</span><span aria-hidden="true">↗</span></button>
+			</form>
+			<p class="form-note" id="formNote" role="status">Enter your local birth time for the most precise result.</p>
+		</section>
+
+		<section class="dashboard-grid" aria-live="polite">
+			<article class="age-card glass-panel span-two">
+				<div class="card-topline"><div><p class="eyebrow">Your current age</p><h2 id="ageLabel">Waiting for your date</h2></div><span class="card-icon">◷</span></div>
+				<div class="age-readout" id="ageReadout"><span class="big-number">—</span><span class="unit">years</span></div>
+				<div class="age-breakdown" id="ageBreakdown"><div><strong>—</strong><span>months</span></div><div><strong>—</strong><span>days</span></div><div><strong>—</strong><span>hours</span></div><div><strong>—</strong><span>minutes</span></div><div><strong>—</strong><span>seconds</span></div></div>
+				<div class="age-footer"><span id="bornLabel">Timeline paused</span><span class="pulse-line"></span><span id="updatedLabel">Waiting</span></div>
+			</article>
+
+			<article class="stat-card glass-panel accent-card"><span class="card-icon">♥</span><p class="eyebrow">Estimated heartbeats</p><strong class="stat-number" id="heartbeats">—</strong><span class="stat-caption">at 80 beats / minute</span></article>
+			<article class="stat-card glass-panel"><span class="card-icon">◌</span><p class="eyebrow">Breaths taken</p><strong class="stat-number" id="breaths">—</strong><span class="stat-caption">at 16 breaths / minute</span></article>
+			<article class="stat-card glass-panel"><span class="card-icon">☾</span><p class="eyebrow">Time asleep</p><strong class="stat-number" id="sleepHours">—</strong><span class="stat-caption">assuming 8 hours / day</span></article>
+			<article class="stat-card glass-panel"><span class="card-icon">⊙</span><p class="eyebrow">Solar orbits</p><strong class="stat-number" id="orbits">—</strong><span class="stat-caption">one trip around the sun</span></article>
+
+			<article class="milestone-card glass-panel span-two">
+				<div class="card-topline"><div><p class="eyebrow">Next milestone</p><h2 id="milestoneTitle">Your next birthday</h2></div><span class="milestone-badge" id="milestoneDays">— days</span></div>
+				<div class="progress-track"><span id="milestoneProgress"></span></div>
+				<div class="milestone-meta"><span id="milestoneDate">Add your date to begin</span><strong id="milestonePercent">0%</strong></div>
+			</article>
+
+			<aside class="copy-panel glass-panel"><p class="eyebrow">Take it with you</p><h2>Keep the<br><em>perspective.</em></h2><button class="secondary-button" id="copyButton" type="button" disabled><span aria-hidden="true">▣</span> Copy results</button><p class="copy-feedback" id="copyFeedback" role="status"></p></aside>
+		</section>
+		<footer class="footer"><span>Built for the moments between moments.</span><span>All estimates are approximations.</span></footer>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
