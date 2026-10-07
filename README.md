@@ -1,6 +1,7 @@
 # Chronos — Real-Time Life & Age Dashboard
 
 Chronos is a lightweight, zero-dependency single-page web app that calculates your exact age down to the second and translates your time on Earth into interactive biological and cosmic statistics.
+Live Demo: https://chronos-blue-theta.vercel.app/
 
 ![Clean UI](https://img.shields.io/badge/UI-Bento_Grid-blue)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-None-brightgreen)
